@@ -6,8 +6,8 @@ const app = express();
 
 const start = async () => {
   try {
-    await sequelize.authenticate();
-    await sequelize.sync();
+    // await sequelize.authenticate();
+    // await sequelize.sync();
     app.listen(PORT, () => {
       console.log(`Server started on port ${PORT}`);
     });
@@ -15,3 +15,5 @@ const start = async () => {
     console.log(e);
   }
 };
+
+start();
