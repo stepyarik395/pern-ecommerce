@@ -45,7 +45,7 @@ const DeviceInfo = sequelize.define('device_info', {
   description: { type: DataTypes.STRING, allowNull: false },
 });
 
-const Typebrand = sequelize.define('type_brand', {
+const TypeBrand = sequelize.define('type_brand', {
   id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
 });
 
@@ -75,3 +75,15 @@ DeviceInfo.belongsTo(Device);
 
 Type.belongsTo(Brand, { throught: Typebrand });
 Brand.belongsToMany(Type, { throught: Typebrand });
+
+module.exports = {
+  User,
+  Basket,
+  BaketDevice,
+  Device,
+  Type,
+  Brand,
+  Rating,
+  TypeBrand,
+  DeviceInfo,
+};
