@@ -73,8 +73,8 @@ BaketDevice.belongsTo(Device);
 Device.hasMany(DeviceInfo);
 DeviceInfo.belongsTo(Device);
 
-Type.belongsTo(Brand, { throught: Typebrand });
-Brand.belongsToMany(Type, { throught: Typebrand });
+Type.belongsTo(Brand, { throught: TypeBrand });
+Brand.belongsToMany(Type, { throught: TypeBrand });
 
 module.exports = {
   User,
