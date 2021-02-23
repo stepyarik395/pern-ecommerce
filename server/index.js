@@ -9,9 +9,9 @@ const cors = require('cors');
 const start = async () => {
   app.use(cors());
   app.use(express.json());
-  app.get('/', (req, res) => {
-    res.status(200).json({ message: 'WORKING!!!!' });
-  });
+  // app.get('/', (req, res) => {
+  //   res.status(200).json({ message: 'WORKING!!!!' });
+  // });
   try {
     await sequelize.authenticate();
     await sequelize.sync();
